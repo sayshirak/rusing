@@ -1,6 +1,6 @@
 const provider = require("../../providers/index.js");
 const env = require("../../config/env");
-const { getRecentTrack, getSettings } = require("../../utils/storage");
+const { getRecentTrack } = require("../../utils/storage");
 
 Page({
   data: {
@@ -59,17 +59,22 @@ Page({
       return;
     }
 
-    const settings = getSettings();
     const defaultPlaylist = playlists[0];
-    wx.navigateTo({
-      url: `/pages/player/player?playlistId=${defaultPlaylist.playlistId}&mode=${settings.playMode || "order"}`,
+    const app = getApp();
+    app.globalData.pendingPlaySelection = {
+      playlistId: defaultPlaylist.playlistId,
+    };
+    wx.switchTab({
+      url: "/pages/player/player",
     });
   },
 
   onTapPlaylist(event) {
     const { id } = event.currentTarget.dataset;
-    wx.navigateTo({
-      url: `/pages/playlist/playlist?playlistId=${id}`,
+    const app = getApp();
+    app.globalData.pendingPlaylistId = id || "";
+    wx.switchTab({
+      url: "/pages/playlist/playlist",
     });
   },
 
@@ -82,8 +87,13 @@ Page({
       });
       return;
     }
-    wx.navigateTo({
-      url: `/pages/player/player?playlistId=${recentTrack.playlistId}&trackId=${recentTrack.trackId}`,
+    const app = getApp();
+    app.globalData.pendingPlaySelection = {
+      playlistId: recentTrack.playlistId,
+      trackId: recentTrack.trackId,
+    };
+    wx.switchTab({
+      url: "/pages/player/player",
     });
   },
 });

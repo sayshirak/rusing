@@ -29,6 +29,19 @@ Page({
     this.loadPlaylistsAndTracks(playlistId);
   },
 
+  onShow() {
+    const app = getApp();
+    const pendingPlaylistId = app.globalData.pendingPlaylistId;
+    if (!pendingPlaylistId) {
+      return;
+    }
+    app.globalData.pendingPlaylistId = "";
+    if (pendingPlaylistId === this.data.playlistId) {
+      return;
+    }
+    this.loadPlaylistsAndTracks(pendingPlaylistId);
+  },
+
   async loadPlaylistsAndTracks(playlistId) {
     this.setData({ loading: true });
     try {
