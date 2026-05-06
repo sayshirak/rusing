@@ -1,0 +1,48 @@
+{
+  "playlistId": "p001",
+  "updatedAt": "2026-04-23T18:00:00Z",
+  "data": [
+    {
+      "trackId": "t001",
+      "title": "轻听精选",
+      "artist": "Rusing Studio",
+      "album": "轻听精选 Vol.1",
+      "duration": 228,
+      "source": "self-hosted",
+      "status": "active",
+      "playUrl": "https://music.163.com/song/media/outer/url?id=347230.mp3",
+      "coverUrl": "https://static.rusing.net/covers/t001.jpg",
+      "lyricUrl": "",
+      "sortOrder": 1,
+      "updatedAt": "2026-04-23T18:00:00Z"
+    },
+    {
+      "trackId": "t002",
+      "title": "晨光漫步",
+      "artist": "Rusing Studio",
+      "album": "轻听精选 Vol.1",
+      "duration": 201,
+      "source": "self-hosted",
+      "status": "active",
+      "playUrl": "https://music.163.com/song/media/outer/url?id=27646205.mp3",
+      "coverUrl": "https://static.rusing.net/covers/t002.jpg",
+      "lyricUrl": "",
+      "sortOrder": 2,
+      "updatedAt": "2026-04-23T18:00:00Z"
+    },
+    {
+      "trackId": "t003",
+      "title": "静海",
+      "artist": "Rusing Studio",
+      "album": "轻听精选 Vol.1",
+      "duration": 245,
+      "source": "self-hosted",
+      "status": "active",
+      "playUrl": "https://music.163.com/song/media/outer/url?id=167876.mp3",
+      "coverUrl": "https://static.rusing.net/covers/t003.jpg",
+      "lyricUrl": "",
+      "sortOrder": 3,
+      "updatedAt": "2026-04-23T18:00:00Z"
+    }
+  ]
+}

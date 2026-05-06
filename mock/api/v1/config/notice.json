@@ -1,0 +1,15 @@
+{
+  "updatedAt": "2026-04-23T18:00:00Z",
+  "data": {
+    "noticeId": "n001",
+    "title": "欢迎使用 Rusing",
+    "content": "",
+    "priority": "normal",
+    "status": "active",
+    "showFrom": "2026-04-20T00:00:00Z",
+    "showTo": "2026-06-30T23:59:59Z",
+    "buttonText": "了解详情",
+    "buttonLink": "https://rusing.net/notice/intro",
+    "updatedAt": "2026-04-23T18:00:00Z"
+  }
+}

@@ -1,0 +1,57 @@
+.header-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.source-tag {
+  margin-top: 8rpx;
+  color: #0f8b8d;
+  font-size: 22rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+  display: block;
+}
+
+.start-btn {
+  margin-bottom: 14rpx;
+}
+
+.button-ghost {
+  background: #e7f8f8;
+  color: #0f8b8d;
+  border-radius: 14rpx;
+}
+
+.notice-content {
+  color: #4c5b6f;
+  line-height: 1.6;
+}
+
+.playlist-item {
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #edf1f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist-item:last-child {
+  border-bottom: none;
+}
+
+.playlist-name {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+}
+
+.playlist-action {
+  color: #0f8b8d;
+  font-size: 24rpx;
+}

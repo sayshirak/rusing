@@ -1,0 +1,48 @@
+{
+  "playlistId": "p002",
+  "updatedAt": "2026-04-23T18:00:00Z",
+  "data": [
+    {
+      "trackId": "t101",
+      "title": "星光旅途",
+      "artist": "Rusing Studio",
+      "album": "致敬经典 Vol.1",
+      "duration": 219,
+      "source": "self-hosted",
+      "status": "active",
+      "playUrl": "https://music.163.com/song/media/outer/url?id=22706973.mp3",
+      "coverUrl": "https://static.rusing.net/covers/t101.jpg",
+      "lyricUrl": "",
+      "sortOrder": 1,
+      "updatedAt": "2026-04-23T18:00:00Z"
+    },
+    {
+      "trackId": "t102",
+      "title": "晚风邮差",
+      "artist": "Rusing Studio",
+      "album": "致敬经典 Vol.1",
+      "duration": 230,
+      "source": "self-hosted",
+      "status": "active",
+      "playUrl": "https://music.163.com/song/media/outer/url?id=28285910.mp3",
+      "coverUrl": "https://static.rusing.net/covers/t102.jpg",
+      "lyricUrl": "",
+      "sortOrder": 2,
+      "updatedAt": "2026-04-23T18:00:00Z"
+    },
+    {
+      "trackId": "t103",
+      "title": "夏末站台",
+      "artist": "Rusing Studio",
+      "album": "致敬经典 Vol.1",
+      "duration": 214,
+      "source": "self-hosted",
+      "status": "active",
+      "playUrl": "https://music.163.com/song/media/outer/url?id=1372060183.mp3",
+      "coverUrl": "https://static.rusing.net/covers/t103.jpg",
+      "lyricUrl": "",
+      "sortOrder": 3,
+      "updatedAt": "2026-04-23T18:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/player/player",
+    "pages/home/home",
+    "pages/playlist/playlist",
+    "pages/me/me"
+  ],
+  "window": {
+    "navigationBarTitleText": "Rusing",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f8fa",
+    "backgroundTextStyle": "light"
+  },
+  "requiredBackgroundModes": ["audio"],
+  "tabBar": {
+    "color": "#5e6b7a",
+    "selectedColor": "#0f8b8d",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/player/player",
+        "text": "播放"
+      },
+      {
+        "pagePath": "pages/playlist/playlist",
+        "text": "歌单"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
