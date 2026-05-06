@@ -4,5 +4,6 @@
     currentPlaylistId: "",
     playMode: "order",
     pendingPlaySelection: null,
+    pendingPlaylistId: "",
   },
 });
