@@ -1,0 +1,85 @@
+<view class="container">
+  <view class="card hero">
+    <view class="cover-wrap">
+      <image
+        wx:if="{{currentTrack && currentTrack.coverUrl && !coverLoadError}}"
+        class="cover-image"
+        src="{{currentTrack.coverUrl}}"
+        mode="aspectFill"
+        binderror="onCoverError"
+      />
+      <image
+        wx:elif="{{currentTrack && fallbackCoverUrl}}"
+        class="cover-image"
+        src="{{fallbackCoverUrl}}"
+        mode="aspectFill"
+      />
+      <view wx:else class="cover-placeholder">R</view>
+    </view>
+    <text class="subtitle">正在播放</text>
+    <text class="track-title">{{currentTrack ? currentTrack.title : '未开始播放'}}</text>
+    <text class="track-artist">{{currentTrack ? currentTrack.artist : '请选择曲目'}}</text>
+    <view class="progress-wrap">
+      <slider
+        class="progress-slider"
+        min="0"
+        max="{{durationSeconds || 1}}"
+        step="1"
+        value="{{sliderValue}}"
+        activeColor="#0f8b8d"
+        backgroundColor="#d8e1e8"
+        block-size="16"
+        bindchanging="onProgressChanging"
+        bindchange="onProgressChange"
+      />
+      <view class="progress-time-row">
+        <text class="track-time">{{currentTime}}</text>
+        <text class="track-time">{{duration}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card controls">
+    <view class="icon-btn icon-btn-side" bindtap="onTapPrev">
+      <view class="icon-prev">
+        <view class="icon-bar"></view>
+        <view class="icon-triangle-left"></view>
+      </view>
+    </view>
+
+    <view class="icon-btn icon-btn-main" bindtap="onTapPlayPause">
+      <view wx:if="{{!playing}}" class="icon-play"></view>
+      <view wx:else class="icon-pause">
+        <view class="pause-bar"></view>
+        <view class="pause-bar"></view>
+      </view>
+    </view>
+
+    <view class="icon-btn icon-btn-side" bindtap="onTapNext">
+      <view class="icon-next">
+        <view class="icon-triangle-right"></view>
+        <view class="icon-bar"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="mode-row" bindtap="onTapMode">
+      <text>播放模式</text>
+      <text class="mode-text">{{playMode === 'order' ? '顺序' : (playMode === 'random' ? '随机' : '单曲循环')}}</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <text class="section-title">播放列表</text>
+    <block wx:for="{{tracks}}" wx:key="trackId">
+      <view class="list-item {{index === currentIndex ? 'active-item' : ''}}" data-index="{{index}}" bindtap="onTapListTrack">
+        <text class="list-index">{{index + 1}}</text>
+        <view class="list-body">
+          <text class="list-title">{{item.title}}</text>
+          <text class="subtitle">{{item.artist}} · {{item.displayDuration}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

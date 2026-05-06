@@ -1,0 +1,16 @@
+{
+  "userId": "u001",
+  "openId": "test-openid-u001",
+  "nickname": "Rusing试听用户",
+  "avatarUrl": "https://static.rusing.net/avatar/u001.png",
+  "status": "active",
+  "preferences": {
+    "playMode": "random",
+    "autoPlay": false,
+    "volume": 0.8
+  },
+  "recentPlaylistId": "p001",
+  "recentTrackId": "t002",
+  "createdAt": "2026-04-20T08:00:00Z",
+  "updatedAt": "2026-04-23T18:00:00Z"
+}

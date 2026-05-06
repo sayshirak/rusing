@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-04-23T18:00:00Z",
+  "data": [
+    {
+      "playlistId": "p001",
+      "name": "轻听精选",
+      "type": "featured",
+      "status": "active",
+      "coverUrl": "https://static.rusing.net/covers/p001.jpg",
+      "description": "适合学习与放松的轻音乐集合",
+      "trackCount": 3,
+      "tags": ["轻音乐", "学习", "放松"],
+      "updatedAt": "2026-04-23T18:00:00Z"
+    },
+    {
+      "playlistId": "p002",
+      "name": "致敬经典",
+      "type": "featured",
+      "status": "active",
+      "coverUrl": "https://static.rusing.net/covers/p002.jpg",
+      "description": "流传百年的经典音乐",
+      "trackCount": 3,
+      "tags": ["经典", "古典", "流传"],
+      "updatedAt": "2026-04-23T18:00:00Z"
+    }
+  ]
+}

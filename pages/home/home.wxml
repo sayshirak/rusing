@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card header-card">
+    <text class="title">Rusing</text>
+    <text class="subtitle">简易播放器 · 打开即听</text>
+    <text class="source-tag">数据源：{{mode === 'api' ? '后端接口' : '静态JSON'}}</text>
+  </view>
+
+  <view class="card">
+    <text class="section-title">主入口</text>
+    <button class="button-primary start-btn" bindtap="onTapStart">开始播放</button>
+    <button class="button-ghost" bindtap="onTapRecent">继续最近播放</button>
+  </view>
+
+  <view class="card" wx:if="{{notice}}">
+    <text class="section-title">{{notice.title}}</text>
+    <text class="notice-content">{{notice.content}}</text>
+  </view>
+
+  <view class="card" wx:if="{{user}}">
+    <text class="section-title">用户</text>
+    <text>{{user.nickname}}</text>
+  </view>
+
+  <view class="card">
+    <text class="section-title">精选歌单</text>
+    <view wx:if="{{loading}}" class="subtitle">加载中...</view>
+    <block wx:for="{{playlists}}" wx:key="playlistId">
+      <view class="playlist-item" data-id="{{item.playlistId}}" bindtap="onTapPlaylist">
+        <view>
+          <text class="playlist-name">{{item.name}}</text>
+          <text class="subtitle">{{item.description}}</text>
+        </view>
+        <text class="playlist-action">进入</text>
+      </view>
+    </block>
+  </view>
+</view>

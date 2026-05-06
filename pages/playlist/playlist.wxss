@@ -1,0 +1,52 @@
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 14rpx;
+  display: block;
+}
+
+.playlist-tabs {
+  white-space: nowrap;
+}
+
+.tab-wrap {
+  display: flex;
+  gap: 14rpx;
+}
+
+.tab-item {
+  padding: 12rpx 20rpx;
+  border-radius: 999rpx;
+  background: #edf1f4;
+  color: #506176;
+  font-size: 24rpx;
+}
+
+.tab-item-active {
+  background: #0f8b8d;
+  color: #ffffff;
+}
+
+.track-item {
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #edf1f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.track-item:last-child {
+  border-bottom: none;
+}
+
+.track-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+}
+
+.track-duration {
+  font-size: 22rpx;
+  color: #6f7d91;
+}

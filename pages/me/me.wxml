@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="card" wx:if="{{user}}">
+    <text class="section-title">用户信息</text>
+    <text>昵称：{{user.nickname}}</text>
+    <text class="subtitle">用户ID：{{user.userId}}</text>
+  </view>
+
+  <view class="card" wx:if="{{notice}}">
+    <text class="section-title">公告</text>
+    <text>{{notice.title}}</text>
+    <text class="subtitle">{{notice.content}}</text>
+  </view>
+
+  <view class="card">
+    <text class="section-title">设置</text>
+    <picker mode="selector" range="{{['顺序', '随机', '单曲循环']}}" value="{{settings.playMode === 'order' ? 0 : (settings.playMode === 'random' ? 1 : 2)}}" bindchange="onModeChange">
+      <view class="setting-row">
+        <text>默认播放模式</text>
+        <text class="setting-value">{{settings.playMode === 'order' ? '顺序' : (settings.playMode === 'random' ? '随机' : '单曲循环')}}</text>
+      </view>
+    </picker>
+    <view class="setting-row">
+      <text>自动播放</text>
+      <switch checked="{{settings.autoPlay}}" bindchange="onAutoPlayChange" color="#0f8b8d" />
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{recentTrack}}">
+    <text class="section-title">最近播放</text>
+    <text>{{recentTrack.title}}</text>
+    <text class="subtitle">{{recentTrack.artist}}</text>
+  </view>
+</view>
